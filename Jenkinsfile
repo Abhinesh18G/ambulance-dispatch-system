@@ -1,5 +1,4 @@
 pipeline {
-
     agent any
 
     tools {
@@ -15,13 +14,13 @@ pipeline {
             }
         }
 
-        stage('Clean and Compile') {
+        stage('Clean & Compile') {
             steps {
                 bat 'mvn clean compile'
             }
         }
 
-        stage('Run Tests') {
+        stage('Execute Comprehensive Tests') {
             steps {
                 bat 'mvn test'
             }
@@ -35,14 +34,12 @@ pipeline {
     }
 
     post {
-
         always {
-            junit allowEmptyResults: true,
-                  testResults: '**/target/surefire-reports/*.xml'
+            junit '**/target/surefire-reports/*.xml'
         }
 
         success {
-            echo 'Ambulance Dispatch CI/CD Pipeline completed successfully.'
+            echo 'Pipeline completed successfully!'
         }
 
         failure {
