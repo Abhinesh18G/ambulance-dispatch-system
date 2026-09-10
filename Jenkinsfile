@@ -11,7 +11,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YOUR_USERNAME/ambulance-dispatch-system.git'
+                    url: 'https://github.com/Abhinesh18G/ambulance-dispatch-system.git'
             }
         }
 
