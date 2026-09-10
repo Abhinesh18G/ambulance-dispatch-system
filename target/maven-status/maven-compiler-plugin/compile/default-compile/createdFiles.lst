@@ -1,0 +1,10 @@
+com\emergency\EmergencyApplication.class
+com\emergency\model\AmbulanceType.class
+com\emergency\model\EmergencyStatus.class
+com\emergency\model\Ambulance.class
+com\emergency\exception\ResourceUnavailableException.class
+com\emergency\model\EmergencyRequest.class
+com\emergency\model\AmbulanceStatus.class
+com\emergency\model\EmergencyPriority.class
+com\emergency\service\DispatchService.class
+com\emergency\exception\InvalidRequestException.class
